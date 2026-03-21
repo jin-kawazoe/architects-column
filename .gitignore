@@ -1,0 +1,17 @@
+# シークレット
+secrets.py
+
+# ログ
+daily_log.txt
+
+# 一時画像ファイル
+tmp*.jpg
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db

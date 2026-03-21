@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -L \"https://drive.usercontent.google.com/download?id=1rs0TS2YzrlDrLKj0WEfodtEhqbXAEu2M&export=download&confirm=t\" -o \"logo_black.jpg\")",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)",
+      "Bash(powershell.exe -Command \"Add-Type -AssemblyName System.Drawing; foreach\\($f in @\\(''logo.jpg'',''logo_black.jpg''\\)\\) { $img = [System.Drawing.Image]::FromFile\\(''C:\\\\Users\\\\jinka\\\\OneDrive\\\\デスクトップ\\\\site\\\\'' + $f\\); Write-Output \\($f + '': '' + $img.Width + ''x'' + $img.Height\\); $img.Dispose\\(\\) }\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(python3 -c \"import PIL; print\\(''PIL version:'', PIL.__version__\\)\")",
+      "Bash(pip install Pillow)",
+      "Bash(python3:*)",
+      "Bash(python _ftp_upload.py)",
+      "Bash(python build.py)",
+      "Bash(python upload.py)",
+      "Bash(python deploy.py)",
+      "Bash(ls \"H:/共有ドライブ/HP_/architects-column/\"*.png)",
+      "Bash(ls \"H:/共有ドライブ/HP_/architects-column/\"ogp*)",
+      "Bash(python -c \"import PIL; print\\(''''Pillow OK''''\\)\")",
+      "Bash(pip install:*)",
+      "Bash(where python:*)",
+      "Bash(python -c \"import sys; print\\(sys.executable\\)\")",
+      "Bash(powershell -Command \"[System.Environment]::GetEnvironmentVariable\\(''ANTHROPIC_API_KEY'', ''Machine''\\)\")",
+      "Bash(python -X utf8 build.py)",
+      "Bash(python -X utf8 deploy.py)",
+      "WebFetch(domain:api.pexels.com)",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(powershell -Command \"Get-ScheduledTask -TaskName ''architects-column-daily'' | Select-Object TaskName, State, LastRunTime, NextRunTime, LastTaskResult | Format-List\")",
+      "Bash(powershell -Command \":*)",
+      "Bash(powershell -Command \"Start-ScheduledTask -TaskName ''architects-column-daily''; Start-Sleep -Seconds 30; Get-ScheduledTaskInfo -TaskName ''architects-column-daily'' | Select-Object LastRunTime, LastTaskResult\")",
+      "Bash(powershell -Command \"cd ''H:\\\\共有ドライブ\\\\HP_\\\\architects-column''; cmd /c run_daily.bat 2>&1\")",
+      "Bash(powershell -Command \"Get-Item ''H:\\\\共有ドライブ\\\\HP_\\\\architects-column\\\\run_daily.bat''\")",
+      "Bash(cmd /c \"H:\\\\共有ドライブ\\\\HP_\\\\architects-column\\\\run_daily.bat\")",
+      "Bash(powershell -Command \"Get-Content ''H:\\\\共有ドライブ\\\\HP_\\\\architects-column\\\\daily_log.txt''\")",
+      "Bash(python -X utf8 generate_article.py)",
+      "Bash(powershell -Command \"Select-String -Path ''H:\\\\共有ドライブ\\\\HP_\\\\architects-column\\\\generate_article.py'' -Pattern ''ANTHROPIC|api_key|client'' | Select-Object -First 15\")"
+    ]
+  }
+}

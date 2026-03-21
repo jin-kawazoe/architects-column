@@ -1,0 +1,40 @@
+User-agent: *
+Allow: /
+
+# LLM / AI crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Spam/scraper bots
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://kawazoe-architects.com/column/sitemap.xml
+
+# LLM-readable content
+# llms.txt: https://kawazoe-architects.com/column/llms.txt
