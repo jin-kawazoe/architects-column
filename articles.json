@@ -2,6 +2,90 @@
   "siteUrl": "https://kawazoe-architects.com",
   "articles": [
     {
+      "slug": "tokyo-urban-density-and-green",
+      "title": "高密度都市と緑——東京の中の自然を考える住宅設計のアプローチ",
+      "titleHtml": "高密度都市と緑<br>——東京の中の<em>自然</em>を考える",
+      "date": "2026-03-22",
+      "dateFormatted": "2026.03.22",
+      "category": "都市",
+      "categoryLabel": "都市と暮らし",
+      "author": {
+        "name": "河添 甚",
+        "role": "代表建築家 / KAWAZOE-ARCHITECTS主宰",
+        "avatarChar": "河",
+        "bio": "1977年、香川県生まれ。2002年に大阪工業大学工学部建築学科を卒業。2010年、河添建築事務所に参画し代表に就任。香川・東京の二拠点を構え、住宅から商業建築まで幅広い設計を手がける。",
+        "avatarImage": "avatar.jpg"
+      },
+      "excerpt": "窓の外に何が見えるか——東京の住宅設計で避けられないこの問いに、建築家はどう向き合うのか。高密度都市における緑と自然の取り入れ方を考察します。",
+      "heroImage": "https://images.pexels.com/photos/1134166/pexels-photo-1134166.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+      "cardImage": "https://images.pexels.com/photos/1134166/pexels-photo-1134166.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "readTime": "8 min",
+      "tags": [
+        "都市と緑",
+        "東京の住宅",
+        "高密度都市",
+        "開口部設計",
+        "住環境"
+      ],
+      "keywords": "高密度都市,東京,緑,住宅設計,窓,開口部,都市の自然",
+      "faqItems": [
+        {
+          "q": "東京の狭小地でも緑を取り入れた設計は可能ですか？",
+          "a": "可能です。中庭や坪庭、壁面緑化、屋上緑化など、敷地条件に応じた様々な手法があります。窓からの視線の抜け方を工夫することで、小さな緑でも効果的に自然を感じられる空間をつくれます。"
+        },
+        {
+          "q": "隣家に囲まれた敷地で開放感を得るにはどうすればよいですか？",
+          "a": "視線の抜ける方向を丁寧に分析し、トップライトや高窓の活用、中庭の設置などで光と空を取り込みます。見える景色を選び取る設計により、限られた条件でも心地よい住環境を実現できます。"
+        }
+      ],
+      "ctaTitle": "東京での住宅設計<br>ご相談ください",
+      "ctaText": "限られた敷地条件でも、緑や光を感じられる住まいを実現します。高密度都市での設計経験を活かし、最適なご提案をいたします。",
+      "cardLayout": "",
+      "featured": false
+    },
+    {
+      "slug": "tile-expression-architecture-identity",
+      "title": "タイルの表情——床と壁が語る建築の個性と素材が紡ぐ空間の物語",
+      "titleHtml": "タイルの表情<br><em>床と壁が語る</em>建築の個性",
+      "date": "2026-03-22",
+      "dateFormatted": "2026.03.22",
+      "category": "素材",
+      "categoryLabel": "素材研究",
+      "author": {
+        "name": "河添 甚",
+        "role": "代表建築家 / KAWAZOE-ARCHITECTS主宰",
+        "avatarChar": "河",
+        "bio": "1977年、香川県生まれ。2002年に大阪工業大学工学部建築学科を卒業。2010年、河添建築事務所に参画し代表に就任。香川・東京の二拠点を構え、住宅から商業建築まで幅広い設計を手がける。",
+        "avatarImage": "avatar.jpg"
+      },
+      "excerpt": "光の当たり方で変わる釉薬の深み、手触りから伝わる土の記憶。20年以上のキャリアを持つ建築家が語る、タイルという素材の奥深い魅力と空間づくりへの可能性を探る。",
+      "heroImage": "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+      "cardImage": "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "readTime": "8 min",
+      "tags": [
+        "タイル",
+        "素材研究",
+        "内装デザイン",
+        "建築素材",
+        "空間演出"
+      ],
+      "keywords": "タイル,建築素材,釉薬,床材,壁材",
+      "faqItems": [
+        {
+          "q": "タイルを選ぶ際に最も重要なポイントは何ですか？",
+          "a": "使用する場所の環境（床か壁か、水回りか乾燥した場所か）と、光の入り方を考慮することが重要です。釉薬の種類や表面の質感によって空間の印象が大きく変わります。"
+        },
+        {
+          "q": "タイルの個体差は品質の問題ではないのですか？",
+          "a": "手作りや窯焼きのタイルに見られる微妙な色ムラや個体差は、むしろ空間に深みと温かみを与える魅力です。均一すぎない表情が建築に豊かな個性をもたらします。"
+        }
+      ],
+      "ctaTitle": "タイル選びの<br>ご相談はこちら",
+      "ctaText": "空間の個性を引き出すタイル選びをプロがサポート。素材の特性を活かした建築デザインについてお気軽にご相談ください。",
+      "cardLayout": "",
+      "featured": false
+    },
+    {
       "slug": "architecture-and-memory",
       "title": "建築と記憶——古民家の梁に刻まれた百年の時間と職人の痕跡",
       "titleHtml": "建築と記憶<br><em>場所が持つ時間の厚み</em>",

@@ -3,9 +3,29 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://kawazoe-architects.com/column/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kawazoe-architects.com/column/articles/tokyo-urban-density-and-green.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/1134166/pexels-photo-1134166.jpeg</image:loc>
+      <image:title>高密度都市と緑——東京の中の自然を考える住宅設計のアプローチ</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kawazoe-architects.com/column/articles/tile-expression-architecture-identity.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg</image:loc>
+      <image:title>タイルの表情——床と壁が語る建築の個性と素材が紡ぐ空間の物語</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kawazoe-architects.com/column/articles/architecture-and-memory.html</loc>
