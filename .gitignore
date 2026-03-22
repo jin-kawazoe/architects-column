@@ -6,6 +6,9 @@ daily_log.txt
 
 # 一時画像ファイル
 tmp*.jpg
+chk*.jpg
+chk2*.jpg
+chk3*.jpg
 
 # Python
 __pycache__/
