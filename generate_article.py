@@ -97,14 +97,42 @@ AUTHOR = {
 }
 
 # Pexels フォトID（カテゴリ別の厳選画像プール）
-# 各カテゴリに複数IDを用意し、記事生成のたびにローテーションする
-PEXELS_POOL = {
-    "住宅設計":     ["7031406", "7587880", "1457842", "1643383", "323775"],
-    "建築論":       ["2506211", "2506986", "1108572", "5700892", "3990359"],
-    "素材研究":     ["1090638", "2897812", "1078885", "1080721", "2462015"],
-    "都市と暮らし": ["1134166", "2246776", "7031591", "323780", "1170412"],
-    "商業建築":     ["1884581", "3182812", "7937307", "3060526", "2977547"],
-}
+# 目視確認済みの建築・インテリア良質画像プール（絶対に重複使用しない）
+PEXELS_CURATED = [
+    "1571460",  # モダンリビング・フローティング階段
+    "1571458",  # ミニマルリビング・階段
+    "1571455",  # キッチン+ダイニング+階段
+    "1571456",  # 広々とした開放的リビング
+    "1571457",  # リビング+暖炉・上質な内装
+    "1643384",  # モダンキッチン・木+白
+    "280222",   # 大きな住宅外観・芝生
+    "4352247",  # ミニマルな白いソファ
+    "2724748",  # モダンホワイトキッチン
+    "2187605",  # 日本の古民家集落・屋根
+    "2187603",  # 日本の古民家・夕暮れ光
+    "2507010",  # ハイライズビルロビー・広大な空間
+    "2079234",  # モダンアパートビル外観
+    "2041627",  # オフィス俯瞰・ミーティングテーブル
+    "1571461",  # ホワイトミニマル浴室
+    "1571462",  # ホワイトミニマルシャワー
+    "5872379",  # グレータイル+光の影（素材感）
+]
+
+
+def get_used_photo_ids():
+    """articles.jsonから使用済み画像IDを全て取得する"""
+    if not ARTICLES_JSON.exists():
+        return set()
+    with open(ARTICLES_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+    used = set()
+    for a in data.get("articles", []):
+        for key in ("heroImage", "cardImage"):
+            url = a.get(key, "")
+            m = re.search(r"/photos/(\d+)/", url)
+            if m:
+                used.add(m.group(1))
+    return used
 
 
 def load_state():
@@ -220,14 +248,15 @@ def generate_metadata(cat, theme, body_text):
     raise ValueError("メタデータのJSON抽出に失敗: " + raw[:200])
 
 
-def pick_photo_id(label, state):
-    """カテゴリのプールから次の画像IDをローテーションで取得し、stateを更新する"""
-    pool = PEXELS_POOL.get(label, ["1643383"])
-    indices = state.setdefault("used_photo_indices", {})
-    next_idx = indices.get(label, 0) % len(pool)
-    photo_id = pool[next_idx]
-    indices[label] = next_idx + 1
-    return photo_id
+def pick_photo_id():
+    """articles.jsonの全使用済みIDを確認し、未使用の画像IDを返す（絶対重複なし）"""
+    used = get_used_photo_ids()
+    for pid in PEXELS_CURATED:
+        if pid not in used:
+            return pid
+    # 全て使用済みの場合は最初に戻す（プールを追加すべきタイミング）
+    print("[WARNING] 全画像IDが使用済みです。プールに画像を追加してください。")
+    return PEXELS_CURATED[0]
 
 
 def add_to_articles_json(meta, cat, today_str, state):
@@ -235,7 +264,7 @@ def add_to_articles_json(meta, cat, today_str, state):
     with open(ARTICLES_JSON, encoding="utf-8") as f:
         data = json.load(f)
 
-    photo_id = pick_photo_id(cat["categoryLabel"], state)
+    photo_id = pick_photo_id()
     hero_image = f"https://images.pexels.com/photos/{photo_id}/pexels-photo-{photo_id}.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop"
     card_image = f"https://images.pexels.com/photos/{photo_id}/pexels-photo-{photo_id}.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
 
