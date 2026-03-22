@@ -1593,3 +1593,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--text-primary);
   color: var(--bg-primary);
 }
+
+/* ===== SNSシェアボタン ===== */
+.share-section { margin: 40px 0; padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.share-label { display: block; font-family: var(--font-en); font-size: 11px; letter-spacing: .15em; color: var(--text-muted); margin-bottom: 16px; }
+.share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+.share-btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; border-radius: 4px; font-size: 13px; font-family: var(--font-sans); text-decoration: none; border: none; cursor: pointer; transition: opacity .2s; }
+.share-btn:hover { opacity: .8; }
+.share-btn--x    { background: #000; color: #fff; }
+.share-btn--fb   { background: #1877f2; color: #fff; }
+.share-btn--hatena { background: #00a4de; color: #fff; }
+.share-btn--copy { background: var(--bg-sub,#f5f5f5); color: var(--text); }
