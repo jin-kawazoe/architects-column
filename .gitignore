@@ -9,6 +9,9 @@ tmp*.jpg
 chk*.jpg
 chk2*.jpg
 chk3*.jpg
+cur_*.jpg
+cand*.jpg
+cand2*.jpg
 
 # Python
 __pycache__/
