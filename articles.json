@@ -2,6 +2,90 @@
   "siteUrl": "https://kawazoe-architects.com",
   "articles": [
     {
+      "slug": "courtyard-house-light-and-wind",
+      "title": "中庭のある家——都市で光と風を手に入れる設計術",
+      "titleHtml": "中庭のある家<br>——都市で<em>光と風</em>を手に入れる設計術",
+      "date": "2026-03-24",
+      "dateFormatted": "2026.03.24",
+      "category": "住宅",
+      "categoryLabel": "住宅設計",
+      "author": {
+        "name": "河添 甚",
+        "role": "代表建築家 / KAWAZOE-ARCHITECTS主宰",
+        "avatarChar": "河",
+        "bio": "1977年、香川県生まれ。2002年に大阪工業大学工学部建築学科を卒業。2010年、河添建築事務所に参画し代表に就任。香川・東京の二拠点を構え、住宅から商業建築まで幅広い設計を手がける。",
+        "avatarImage": "avatar.jpg"
+      },
+      "excerpt": "都市部の住宅で「明るさ」と「風通し」を両立させるのは難しい。しかし中庭という選択肢が、プライバシーを守りながら自然を取り込む暮らしを可能にします。",
+      "heroImage": "https://images.pexels.com/photos/7031595/pexels-photo-7031595.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+      "cardImage": "https://images.pexels.com/photos/7031595/pexels-photo-7031595.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "readTime": "8 min",
+      "tags": [
+        "中庭",
+        "住宅設計",
+        "採光",
+        "通風",
+        "都市型住宅"
+      ],
+      "keywords": "中庭のある家,パティオ,採光設計,風通し,都市型住宅",
+      "faqItems": [
+        {
+          "q": "中庭のある家は狭い土地でも実現できますか？",
+          "a": "はい、可能です。むしろ都市部の限られた敷地だからこそ、中庭が効果を発揮します。小さな中庭でも光と風の通り道となり、開放感のある住まいを実現できます。"
+        },
+        {
+          "q": "中庭をつくるとコストはどのくらい上がりますか？",
+          "a": "建物の形状が複雑になる分、一般的に10〜15%程度のコスト増となります。ただし、冷暖房効率の向上や将来的な満足度を考えると、十分に価値のある投資といえます。"
+        }
+      ],
+      "ctaTitle": "光と風を感じる住まいを<br>一緒に考えませんか",
+      "ctaText": "敷地条件を活かした中庭プランをご提案します。まずはお気軽にご相談ください。現地調査から丁寧にサポートいたします。",
+      "cardLayout": "",
+      "featured": false
+    },
+    {
+      "slug": "kitchen-visibility-restaurant-design",
+      "title": "厨房を見せるか隠すか——飲食店設計の核心",
+      "titleHtml": "厨房を<em>見せるか隠すか</em><br>——飲食店設計の核心",
+      "date": "2026-03-24",
+      "dateFormatted": "2026.03.24",
+      "category": "商業建築",
+      "categoryLabel": "商業建築",
+      "author": {
+        "name": "河添 甚",
+        "role": "代表建築家 / KAWAZOE-ARCHITECTS主宰",
+        "avatarChar": "河",
+        "bio": "1977年、香川県生まれ。2002年に大阪工業大学工学部建築学科を卒業。2010年、河添建築事務所に参画し代表に就任。香川・東京の二拠点を構え、住宅から商業建築まで幅広い設計を手がける。",
+        "avatarImage": "avatar.jpg"
+      },
+      "excerpt": "飲食店の設計で最初に問う「厨房を見せるか」という選択。この問いは単なるレイアウトではなく、店が提供する体験の本質を決定づける重要な設計方針の出発点となる。",
+      "heroImage": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+      "cardImage": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "readTime": "8 min",
+      "tags": [
+        "飲食店設計",
+        "厨房設計",
+        "オープンキッチン",
+        "店舗デザイン",
+        "空間体験"
+      ],
+      "keywords": "飲食店設計,厨房設計,オープンキッチン,客席レイアウト,店舗設計",
+      "faqItems": [
+        {
+          "q": "オープンキッチンのメリット・デメリットは？",
+          "a": "メリットは調理の臨場感による体験価値の向上と信頼感の醸成です。デメリットは音や匂いの管理、厨房の美観維持にコストがかかる点。業態やコンセプトに合わせた判断が重要です。"
+        },
+        {
+          "q": "厨房と客席の距離感はどう決めるべき？",
+          "a": "提供したい体験から逆算して決定します。ライブ感を重視するなら近く、落ち着いた食事空間なら適度な距離を。カウンター席の有無や客単価も判断材料となります。"
+        }
+      ],
+      "ctaTitle": "飲食店の設計を<br>お考えですか？",
+      "ctaText": "厨房と客席の最適な関係性から、お店のコンセプトを空間で表現する設計をご提案します。まずはお気軽にご相談ください。",
+      "cardLayout": "",
+      "featured": false
+    },
+    {
       "slug": "tokyo-urban-density-and-green",
       "title": "高密度都市と緑——東京の中の自然を考える住宅設計のアプローチ",
       "titleHtml": "高密度都市と緑<br>——東京の中の<em>自然</em>を考える",
