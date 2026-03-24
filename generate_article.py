@@ -96,27 +96,48 @@ AUTHOR = {
     "avatarImage": "avatar.jpg"
 }
 
-# Pexels フォトID（絶対重複使用なし・articles.json全体で管理）
-PEXELS_CURATED = [
+# Unsplash フォトID（絶対重複使用なし・articles.json全体で管理）
+# 全て目視確認済みの高品質建築写真
+UNSPLASH_CURATED = [
     # 住宅外観・ミニマル系
-    "1571460",  "1571458",  "1571455",  "1571456",  "1571457",
-    "280222",   "1396122",  "2631566",  "4352247",  "5997985",
-    "3288527",  "4947557",  "5490235",  "2725217",  "5825578",
-    "2041627",  "1643384",  "1571461",  "1571462",  "5872379",
-    # 建築・都市・インテリア系
-    "2736388",  "3144581",  "1918291",  "2643698",  "2987750",
-    "3209045",  "2098428",  "2988232",  "3044511",  "2132075",
-    "2082090",  "1510392",  "1005058",  "1266507",  "3559318",
-    "1732414",  "3862132",  "3293148",  "3876394",  "3812433",
-    # 商業・オフィス・都市系
-    "1009136",  "3746927",  "4050290",  "6444254",  "3143170",
-    "1438832",  "3935313",  "1029599",  "2119713",  "2119714",
-    "5793333",  "2507010",  "2187603",
+    "1523217582562-09d0def993a6",  # 白ミニマルキューブハウス
+    "1600585154340-be6161a56a0c",  # ダーク木×白モダン外観（夕暮れ）
+    "1600585154526-990dced4db0d",  # ダーク建築外観（夜）
+    "1613977257363-707ba9348227",  # 白モダンヴィラ+プール
+    "1580587771525-78b9dba3b914",  # モダンヴィラ+プール
+    "1600047509807-ba8f99d2cdde",  # 木パネルモダン外観
+    "1583608205776-bfd35f0d9f83",  # オープン住宅+プール
+    "1600596542815-ffad4c1539a9",  # 白モダンヴィラ
+    "1631679706909-1844bbd07221",  # 木エントランス外観
+    "1568605114967-8130f3a36994",  # 木造住宅（夜）
+    "1512917774080-9991f1c4c750",  # ガラス張りヴィラ
+    # インテリア・空間系
+    "1600573472591-ee6b68d14c68",  # 建築的ベッドルーム
+    "1600607687939-ce8a6c25118c",  # 白ミニマル寝室
+    "1556909114-f6e7ad7d3136",     # モダンリビング
+    "1618221195710-dd6b41faaea6",  # ミニマルインテリア
+    "1586023492125-27b2c045efd3",  # ホワイトインテリア
+    "1555041469-db61197e5b50",     # コンクリートインテリア
+    # 都市・建築外観系
+    "1486325212027-8081e485255e",  # 都市スカイライン
+    "1567684014761-b65e2e59b9eb",  # ガラス集合住宅（夕暮れ）
+    "1486718448742-163732cd1544",  # 建築的コリドー
+    "1431576901776-e539bd916ba2",  # ガラス建築外観
+    "1519971559892-e4e55a4f04b3",  # モダン商業建築
+    "1479839672679-a46cb8676de8",  # 建築ディテール
+    "1543286386-713bdd548da4",     # 都市の建築群
+    # 素材・ディテール系
+    "1558618666-fcd25c85cd64",     # コンクリートテクスチャー
+    "1497366216548-37526070297c",  # モダンオフィス空間
+    "1600210492486-724a01aed8b8",  # ミニマル建築外観
+    "1449824913935-59a10b8d2000",  # 夜の都市建築
+    "1460317442991-0ec209397118",  # 建築廊下
+    "1504307651254-35680f356dfd",  # 建築コンクリート
 ]
 
 
 def get_used_photo_ids():
-    """articles.jsonから使用済み画像IDを全て取得する"""
+    """articles.jsonから使用済み画像IDを全て取得する（Unsplash・Pexels両対応）"""
     if not ARTICLES_JSON.exists():
         return set()
     with open(ARTICLES_JSON, encoding="utf-8") as f:
@@ -125,6 +146,11 @@ def get_used_photo_ids():
     for a in data.get("articles", []):
         for key in ("heroImage", "cardImage"):
             url = a.get(key, "")
+            # Unsplash形式: /photo-{ID}?
+            m = re.search(r"unsplash\.com/photo-([\w-]+)", url)
+            if m:
+                used.add(m.group(1))
+            # Pexels形式: /photos/{ID}/
             m = re.search(r"/photos/(\d+)/", url)
             if m:
                 used.add(m.group(1))
@@ -247,12 +273,12 @@ def generate_metadata(cat, theme, body_text):
 def pick_photo_id():
     """articles.jsonの全使用済みIDを確認し、未使用の画像IDを返す（絶対重複なし）"""
     used = get_used_photo_ids()
-    for pid in PEXELS_CURATED:
+    for pid in UNSPLASH_CURATED:
         if pid not in used:
             return pid
     # 全て使用済みの場合は最初に戻す（プールを追加すべきタイミング）
     print("[WARNING] 全画像IDが使用済みです。プールに画像を追加してください。")
-    return PEXELS_CURATED[0]
+    return UNSPLASH_CURATED[0]
 
 
 def add_to_articles_json(meta, cat, today_str, state):
@@ -261,8 +287,8 @@ def add_to_articles_json(meta, cat, today_str, state):
         data = json.load(f)
 
     photo_id = pick_photo_id()
-    hero_image = f"https://images.pexels.com/photos/{photo_id}/pexels-photo-{photo_id}.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop"
-    card_image = f"https://images.pexels.com/photos/{photo_id}/pexels-photo-{photo_id}.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+    hero_image = f"https://images.unsplash.com/photo-{photo_id}?auto=format&fit=crop&w=1600&h=900&q=80"
+    card_image = f"https://images.unsplash.com/photo-{photo_id}?auto=format&fit=crop&w=600&h=400&q=80"
 
     new_article = {
         "slug": meta["slug"],
